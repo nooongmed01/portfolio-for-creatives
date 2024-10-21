@@ -359,6 +359,19 @@ a:active {
   padding: 1rem;
 }
 
+
+.wordmark-wrapper img {
+  transition: filter 200ms ease-in-out; /* 트랜지션 효과 추가 */
+}
+
+.wordmark-wrapper:hover img {
+  filter: brightness(0) invert(1); /* 마우스 오버 시 색상 반전 효과 */
+}
+
+
+
+
+
 /* Work Page Layout
 
 ██     ██  ██████  ██████  ██   ██     ██████   █████   ██████  ███████ 
