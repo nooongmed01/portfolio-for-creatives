@@ -13,7 +13,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
 /*
 
 Imported stylesheets. Remove the ones you do not want to use.
@@ -360,13 +360,20 @@ a:active {
 }
 
 
-.wordmark-wrapper img {
-  transition: filter 200ms ease-in-out; /* 트랜지션 효과 추가 */
+.wordmark-wrapper {
+  width: 6%;
 }
 
-.wordmark-wrapper:hover img {
-  filter: brightness(0) invert(1); /* 마우스 오버 시 색상 반전 효과 */
+.wordmark {
+  fill: #1e1e1c; /* Default color */
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
 }
+
+.wordmark:hover .cls-1 {
+  fill: white; /* Change color on hover */
+}
+
 
 
 
@@ -442,34 +449,83 @@ a:active {
                                            
 */
 
+body {
+  font-family: var(--body-typeface);
+  color: var(--primary-text-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--background-color);
+}
+
+.about-page {
+  background: var(--background-color-about); /* About 페이지 배경색 */
+}
+
 .about {
   display: grid;
-  grid-template-columns: 1fr;
   grid-gap: 3rem;
   background: var(--background-color-about);
   padding: 1rem;
   flex: 1;
 }
 
-.about-item-1 {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
+.container {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 100%;
 }
 
-.about-item-2 {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  width: 100%;
 }
 
-.about-item-3 {
-  grid-column: 1 / 2;
-  grid-row: 3 / 4;
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.about-item-4 {
-  grid-column: 1 / 2;
-  grid-row: 4 / 5;
+.about-image img {
+  width: 400px; /* 이미지 크기 조정 */
+  height: auto; 
 }
+
+.about-description {
+  flex: 2;
+  padding: 0 20px; /* 여백 추가 */
+}
+
+.bottom-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+h2, h3 {
+  color: #333; /* 텍스트 색상 */
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: #ffcc00; /* 제목 색상 */
+}
+
+p {
+  margin: 5px 0;
+}
+
+
+
 
 /* Global Footer
 
