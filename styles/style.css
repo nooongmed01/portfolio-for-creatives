@@ -90,7 +90,7 @@ html {
   --h3-color: #5200ff;
   --h4-color: #5200ff;
   --h5-color: #5200ff;
-  --h6-color: #5200ff;
+  --h6-color: #000000;
   --primary-text-color: #222;
   --holding-page-title-color: #ebedf0;
   --accent-color: #692513;
@@ -101,7 +101,7 @@ html {
   --hyperlink-alternate-color: orangered;
   --hover-color: #111;
   --visited-color: #5200ff;
-  --project-title-color: #cf8b37;
+  --project-title-color: #0051FF;
   --project-sidebar-background-color: transparent;
   --project-sidebar-text-color: black;
   --heart-color: darkred;
@@ -537,37 +537,31 @@ p {
                                                    
 */
 
-.global-footer {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 3rem;
-  min-height: 100vh;
-  background: var(--background-color-footer);
-  padding: 1rem;
+.footer{
+  display:grid;
+  grid-template-columns: 30vw;
+  grid-template-rows: 1fr;
+  padding: 0px 15px 0px 15px;
+  grid-auto-flow: row;
+  grid-template-areas: "copyright phrase";
+  height: 5vh
 }
 
-.footer-item-1 {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
+.phrase {
+  grid-area: phrase;
+  justify-self: end;
+  align-self: center;
 }
 
-.footer-item-2 {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-}
-
-.footer-item-3 {
-  grid-column: 1 / 2;
-  grid-row: 3 / 4;
-}
-
-.footer-item-4 {
-  grid-column: 1 / 2;
-  grid-row: 4 / 5;
-}
-
-.awards-list {
-  margin-bottom: 2rem;
+hr.footerblack {
+  height: .1rem;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: .5rem;
+  margin-bottom: 0;
+  border: 0;
+  display: block;
+  background: black;
 }
 
 /* Project Page 
@@ -584,6 +578,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: #F7F7F7;
 }
 
 /* Sidebar */
@@ -593,7 +588,7 @@ p {
   display: flex;
   flex-direction: column;
   color: var(--project-sidebar-text-color);
-  background: var(--project-sidebar-background-color);
+  background-color: #F7F7F7;
 }
 
 .project-navigation {
@@ -639,6 +634,8 @@ p {
   padding: 3rem;
 }
 
+
+
 /* Main Project Image Area */
 
 .project-details {
@@ -646,6 +643,31 @@ p {
   padding: 1rem;
   /* TODO: Delete background-image and the three linear gradient colors to remove the gradient background on the project page. Be careful not to delete the closing } */
 
+}
+
+hr.project-footerblack {
+  height: .1rem;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: .5rem;
+  margin-bottom: 0;
+  border: 0;
+  display: block;
+  background: black;
+  background-color: #F7F7F7;
+}
+
+.project-footerblack {
+  background-color: #F7F7F7;
+}
+
+.project-footer {
+  background-color: #F7F7F7;
+
+}
+
+.project-phrase {
+  background-color: #F7F7F7;
 }
 
 /* 
