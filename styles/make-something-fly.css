@@ -10,7 +10,7 @@
 	left: 0;
 	transform: translateX(-120%) translateY(-120%) rotateZ(0);
 	position: fixed;
-	animation-delay: 1s;
+	animation-delay: 60s;
 	z-index: 999999;
     width: 5rem;
 }
