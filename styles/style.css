@@ -313,6 +313,10 @@ a:active {
   padding: 10px 20px;
 }
 
+.hero-header{
+  width: 100%;
+}
+
 .project-hero-header {
   background-color: #f7f7f7;
 }
@@ -326,8 +330,14 @@ a:active {
 }
 
 .logo {
-  margin-right: auto;
-  /* TODO: Adjust the width of the logo on mobile devices here. */
+  width:4rem;  /* TODO: Adjust the width of the logo on mobile devices here. */
+}
+
+.logo-hover{
+  fill:black;
+}
+.logo-hover:hover {
+  fill:white;
 }
 
 .hero-headline-wrapper {
@@ -527,7 +537,7 @@ p {
   grid-template-areas: "copyright phrase";
   height: 15vh;
   border-top: 2px solid var(--alt-background-color);
-  padding-top: 3rem;
+  padding-top: 1rem;
 }
 
 .phrase {
