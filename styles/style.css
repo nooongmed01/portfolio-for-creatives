@@ -313,10 +313,16 @@ a:active {
 */
 
 .hero {
-  min-height: 80vh;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
 }
+
+.project-hero-header{
+  background-color: #F7F7F7;
+}
+
 
 .branding-navigation {
   display: flex;
@@ -327,7 +333,7 @@ a:active {
 }
 
 .logo {
-  width: 3rem;
+  margin-right: auto;
   /* TODO: Adjust the width of the logo on mobile devices here. */
 }
 
@@ -394,7 +400,7 @@ a:active {
 }
 
 /* Padding around work grid and project page */
-.portfolio,
+.portfolio
 .project-wrapper {
   padding: 0.25rem;
 }
@@ -459,8 +465,7 @@ body {
 }
 
 .about-page {
-  background: var(--background-color-about); /* About 페이지 배경색 */
-}
+  background: var(--background-color-about); 
 
 .about {
   display: grid;
@@ -492,7 +497,7 @@ body {
 }
 
 .about-image img {
-  width: 400px; /* 이미지 크기 조정 */
+  width: 400px; 
   height: auto; 
 }
 
@@ -553,7 +558,7 @@ p {
   align-self: center;
 }
 
-hr.footerblack {
+.footerblack {
   height: .1rem;
   margin-left: 1em;
   margin-right: 1em;
@@ -657,7 +662,7 @@ hr.project-footerblack {
   background-color: #F7F7F7;
 }
 
-.project-footerblack {
+hr.project-footerblack {
   background-color: #F7F7F7;
 }
 
@@ -930,4 +935,5 @@ hr.project-footerblack {
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   }
+}
 }
