@@ -10,10 +10,10 @@
 
 /* TODO: Delete the Google Fonts below and add the Google Fonts you want to use on your site. Each Google font that you load will slightly increase the download speed of your site so make sure to only included necessary fonts here. */
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
 /*
 
 Imported stylesheets. Remove the ones you do not want to use.
@@ -80,12 +80,12 @@ html {
   --body-typeface: "Inter", sans-serif;
   --heading-typeface: "DM Sans", sans-serif;
   --project-title-typeface: "DM Sans", sans-serif;
-  --background-color: #0051FF;
+  --background-color: #0051ff;
   --background-color-about: #f5f5f5;
   --background-color-footer: hsl(0, 0%, 96%);
   --alt-background-color: #000000;
   --background-color-holding-page: rgba(82, 0, 255, 0.6);
-  --h1-color: #F7F7F7;
+  --h1-color: #f7f7f7;
   --h2-color: #5200ff;
   --h3-color: #5200ff;
   --h4-color: #5200ff;
@@ -101,7 +101,7 @@ html {
   --hyperlink-alternate-color: orangered;
   --hover-color: #111;
   --visited-color: #5200ff;
-  --project-title-color: #0051FF;
+  --project-title-color: #0051ff;
   --project-sidebar-background-color: transparent;
   --project-sidebar-text-color: black;
   --heart-color: darkred;
@@ -267,13 +267,6 @@ a:active {
   color: var(--hyperlink-alternate-color);
 }
 
-.custom-navigation:hover {
-  background: url(assets/temp/heading-background.svg);
-  background-size: 15%;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
 .heart {
   color: var(--heart-color);
 }
@@ -314,15 +307,15 @@ a:active {
 
 .hero {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
 }
 
-.project-hero-header{
-  background-color: #F7F7F7;
+.project-hero-header {
+  background-color: #f7f7f7;
 }
-
 
 .branding-navigation {
   display: flex;
@@ -365,7 +358,6 @@ a:active {
   padding: 1rem;
 }
 
-
 .wordmark-wrapper {
   width: 6%;
 }
@@ -379,11 +371,6 @@ a:active {
 .wordmark:hover .cls-1 {
   fill: white; /* Change color on hover */
 }
-
-
-
-
-
 
 /* Work Page Layout
 
@@ -400,8 +387,7 @@ a:active {
 }
 
 /* Padding around work grid and project page */
-.portfolio
-.project-wrapper {
+.portfolio .project-wrapper {
   padding: 0.25rem;
 }
 
@@ -455,17 +441,9 @@ a:active {
                                            
 */
 
-body {
-  font-family: var(--body-typeface);
-  color: var(--primary-text-color);
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background: var(--background-color);
-}
-
 .about-page {
-  background: var(--background-color-about); 
+  background: var(--background-color-about);
+}
 
 .about {
   display: grid;
@@ -497,8 +475,8 @@ body {
 }
 
 .about-image img {
-  width: 400px; 
-  height: auto; 
+  width: 400px;
+  height: auto;
 }
 
 .about-description {
@@ -512,7 +490,8 @@ body {
   gap: 20px;
 }
 
-h2, h3 {
+h2,
+h3 {
   color: #333; /* 텍스트 색상 */
 }
 
@@ -529,9 +508,6 @@ p {
   margin: 5px 0;
 }
 
-
-
-
 /* Global Footer
 
 ███████  ██████   ██████  ████████ ███████ ██████  
@@ -542,14 +518,16 @@ p {
                                                    
 */
 
-.footer{
-  display:grid;
+.footer {
+  display: grid;
   grid-template-columns: 30vw;
   grid-template-rows: 1fr;
   padding: 0px 15px 0px 15px;
   grid-auto-flow: row;
   grid-template-areas: "copyright phrase";
-  height: 5vh
+  height: 15vh;
+  border-top: 2px solid var(--alt-background-color);
+  padding-top: 3rem;
 }
 
 .phrase {
@@ -559,10 +537,10 @@ p {
 }
 
 .footerblack {
-  height: .1rem;
+  height: 0.1rem;
   margin-left: 1em;
   margin-right: 1em;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   margin-bottom: 0;
   border: 0;
   display: block;
@@ -583,7 +561,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
 }
 
 /* Sidebar */
@@ -593,7 +571,7 @@ p {
   display: flex;
   flex-direction: column;
   color: var(--project-sidebar-text-color);
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
 }
 
 .project-navigation {
@@ -617,16 +595,10 @@ p {
 
 .project-image {
   width: 100%;
-  min-height: 50vh;
-  /* TODO: Delete min-height if you want to remove space between project images on project pages on mobile devices. It is used for the demo page only. */
+
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.large-emoji-placeholder {
-  font-size: 12rem;
-  /* TODO: Delete this rule. It is only used for making the placeholder emojis large for demo purposes only. */
 }
 
 .text-section {
@@ -639,40 +611,20 @@ p {
   padding: 3rem;
 }
 
-
-
 /* Main Project Image Area */
 
 .project-details {
   width: 100%;
   padding: 1rem;
   /* TODO: Delete background-image and the three linear gradient colors to remove the gradient background on the project page. Be careful not to delete the closing } */
-
-}
-
-hr.project-footerblack {
-  height: .1rem;
-  margin-left: 1em;
-  margin-right: 1em;
-  margin-top: .5rem;
-  margin-bottom: 0;
-  border: 0;
-  display: block;
-  background: black;
-  background-color: #F7F7F7;
-}
-
-hr.project-footerblack {
-  background-color: #F7F7F7;
 }
 
 .project-footer {
-  background-color: #F7F7F7;
-
+  background-color: #f7f7f7;
 }
 
 .project-phrase {
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
 }
 
 /* 
@@ -694,7 +646,12 @@ hr.project-footerblack {
   width: 100%;
   min-height: 100vh;
   /* TODO: Delete the following if you do not want a grainy gradient background on index.html. Be careful not to delete the closing } */
-  background: linear-gradient(0deg, rgba(0, 0, 0, 1), var(--background-color-holding-page)), url(/assets/temp/noise.svg);
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1),
+      var(--background-color-holding-page)
+    ),
+    url(/assets/temp/noise.svg);
   /* For more on grainy gradients see https://grainy-gradients.vercel.app/ */
 }
 
@@ -899,11 +856,6 @@ hr.project-footerblack {
     width: 65%;
   }
 
-  .project-image {
-    min-height: 70vh;
-    /* TODO: Delete min-height if you want to remove space between project images on project pages on large devices. It is used for the demo page only. */
-  }
-
   .project-image-container {
     flex-direction: row;
   }
@@ -933,7 +885,6 @@ hr.project-footerblack {
   /* TODO: Add styles here for XX-large devices. */
 
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
   }
-}
 }
